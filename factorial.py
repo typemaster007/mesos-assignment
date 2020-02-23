@@ -7,14 +7,14 @@ for i in range(100):
     #print(line)
 numfile.close()
 
+def factorial(n):       
+    return 1 if (n==1 or n==0) else n * factorial(n - 1)
+
 #Section to read each random integer and find factorial for the same
 with open("Random_integer.txt") as f:
  for x in f: 
   n = int(x)  
   fact = factorial(int(n))
   print("Factorial of ",n,"is =",fact)
-
-def factorial(n):       
-    return 1 if (n==1 or n==0) else n * factorial(n - 1)
 
 numfile.close()
