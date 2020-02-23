@@ -3,14 +3,14 @@ import random
 numfile = open("Random_integer.txt", "w")
 for i in range(100):
     line = str(random.randint(1,100)) + '\n'
-    numfile.write(line)
-    #print(line)
+    numfile.write(line)    
 numfile.close()
 
+#Function to find factorial of a number recursively
 def factorial(n):       
     return 1 if (n==1 or n==0) else n * factorial(n - 1)
 
-#Section to read each random integer and find factorial for the same
+#Section to read each random integer and call factorial for the same
 with open("Random_integer.txt") as f:
  for x in f: 
   n = int(x)  

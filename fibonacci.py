@@ -7,20 +7,21 @@ for i in range(100):
     #print(line)
 numfile.close()
 
+#Section to calculate the fibonacci series
 def fib(numb):  
-   First_Value = 0
-   Second_Value = 1
+   val1 = 0
+   val2 = 1
    for Num in range(0, numb):
             if(Num <= 1):
                        Next = Num
             else:
-                       Next = First_Value + Second_Value
-                       First_Value = Second_Value
-                       Second_Value = Next
+                       Next = val1 + val2
+                       val1 = val2
+                       val2 = Next
             print(Next,end=' ')
             
 
-
+#logic to open random integer file and call fibonacci func for the same
 with open("fibo.txt") as f:
  for x in f: 
   n = int(x)
