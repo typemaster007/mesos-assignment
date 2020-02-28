@@ -1,4 +1,8 @@
+from __future__ import print_function
 import random
+import time
+
+
 #Section to create and store 100 random integers
 numfile = open("fibo.txt", "w")
 for i in range(100):
@@ -6,6 +10,7 @@ for i in range(100):
     numfile.write(line)
     #print(line)
 numfile.close()
+id = random.randint(1500,1999)
 
 #Section to calculate the fibonacci series
 def fib(numb):  
@@ -25,7 +30,12 @@ def fib(numb):
 with open("fibo.txt") as f:
  for x in f: 
   n = int(x)
-  print("Fib of ",n,"is = ")  
+  print('Request ID : ',id)
+  print('Fibonacci series of ',n,'is = ')  
+  start = time.time()
   fib(n)
-  print("\n") 
+  t = '{:.20f}'.format(time.time()-start)
+  id = id+1
+  print(' \nExecution Time= '+t+' seconds') 
+  print('')
   
